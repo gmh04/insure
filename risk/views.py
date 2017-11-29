@@ -10,7 +10,7 @@ def api(request, risk=None):
             # retieve all common and 'risk' defined RiskValue entries
             vals = RiskValue.objects.filter(Q(entity__name='common') | Q(entity__name=risk))
             context = {'entries': vals}
-            return render(request, 'api.json', context, content_type='application/json')
+            return render(request, 'api.json.djt', context, content_type='application/json')
         else:
             return JsonResponse({'msg': 'Risk needs to be defined'})
     return JsonResponse({'msg': 'To be implemented'}, status=501)
