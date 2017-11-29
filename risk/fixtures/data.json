@@ -1,0 +1,95 @@
+[
+    {
+        "model": "risk.RiskEntity",
+        "pk": 1,
+        "fields": {
+            "name": "common"
+        }
+    },
+    {
+        "model": "risk.RiskEntity",
+        "pk": 2,
+        "fields": {
+            "name": "automobiles"
+        }
+    },
+    {
+        "model": "risk.RiskEntity",
+        "pk": 3,
+        "fields": {
+            "name": "houses"
+        }
+    },
+    {
+        "model": "risk.RiskEntity",
+        "pk": 4,
+        "fields": {
+            "name": "prizes"
+        }
+    },
+    {
+        "model": "risk.RiskAttribute",
+        "pk": 1,
+        "fields": {
+            "attr_type": "text"
+        }
+    },
+    {
+        "model": "risk.RiskAttribute",
+        "pk": 2,
+        "fields": {
+            "attr_type": "number"
+        }
+    },
+    {
+        "model": "risk.RiskAttribute",
+        "pk": 3,
+        "fields": {
+            "attr_type": "date"
+        }
+    },
+    {
+        "model": "risk.RiskAttribute",
+        "pk": 4,
+        "fields": {
+            "attr_type": "enum"
+        }
+    },
+    {
+        "model": "risk.RiskValue",
+        "pk": 1,
+        "fields": {
+            "label": "Customer Name",
+            "entity": 1,
+            "attr": 1
+        }
+    },
+    {
+        "model": "risk.RiskValue",
+        "pk": 2,
+        "fields": {
+            "label": "Age",
+            "entity": 1,
+            "attr": 2
+        }
+    },
+    {
+        "model": "risk.RiskValue",
+        "pk": 3,
+        "fields": {
+            "label": "Date",
+            "entity": 1,
+            "attr": 3
+        }
+    },
+    {
+        "model": "risk.RiskValue",
+        "pk": 4,
+        "fields": {
+            "label": "Model",
+            "entity": 2,
+            "attr": 4,
+            "value": "ford,seat,kia"
+        }
+    }
+]
