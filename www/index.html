@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bitcore Hiring Project</title>
+  </head>
+
+  <body>
+
+    <div id="app">
+      <form>
+        <div v-for="entry in results">
+          <label :for=entry.name>{{ entry.name }}:</label>
+          <div v-if="entry.type === 'enum'">
+            <div v-for="val in entry.value.split(',')">
+              <input type="radio" :name=entry.name :value=val>{{val}}<br>
+            </div>
+          </div>
+          <div v-else>
+            <input :type=entry.type :name=entry.name>
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </body>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="insure.js"></script>
+</html>
