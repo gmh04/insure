@@ -1,9 +1,9 @@
 {
-  "fields": [{{% for question in latest_question_list %}
-      {
-        "name": {{ question.label }},
-        "type": {{ question.attr.attr_type }}, {% if question.value %}
-        "value": {{ question.value }}{% endif %}
-      }
-  {% endfor %}}]
+  "fields": [{% for entry in entries %}
+    {
+      "name": "{{ entry.label }}",
+      "type": "{{ entry.attr.attr_type }}"{% if entry.value %},
+      "value": "{{ entry.value }}"{% endif %}
+    }{% if not forloop.last %},{% endif %} {% endfor %}
+  ]
 }

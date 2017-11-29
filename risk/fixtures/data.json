@@ -77,7 +77,7 @@
         "model": "risk.RiskValue",
         "pk": 3,
         "fields": {
-            "label": "Date",
+            "label": "Date of Birth",
             "entity": 1,
             "attr": 3
         }
@@ -90,6 +90,15 @@
             "entity": 2,
             "attr": 4,
             "value": "ford,seat,kia"
+        }
+    },
+    {
+        "model": "risk.RiskValue",
+        "pk": 5,
+        "fields": {
+            "label": "Year",
+            "entity": 2,
+            "attr": 2
         }
     }
 ]
